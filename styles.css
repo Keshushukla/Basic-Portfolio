@@ -32,6 +32,10 @@ li{
     flex: 1;
 }
 
+.container{
+    padding: 50px 0;
+}
+
 .row{
     width: 100%;
     max-width: 800px;
@@ -40,6 +44,15 @@ li{
 
 .text--purple{
     color: #6030b1;
+}
+
+section:nth-child(even){
+    background-color: #f8f8f8;
+    /* every 2nd section is grey */
+}
+
+.section__title{
+    margin-bottom: 20px;
 }
 /* NAVIGATION BAR */
 
@@ -147,4 +160,16 @@ nav{
 
 .about-me__img{
     width: 100%;
+}
+
+
+/* LANGUAGE */
+.language__img--wrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+.language__img{
+    width: 25%;
+    flex-wrap: wrap;
 }
