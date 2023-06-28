@@ -28,6 +28,11 @@ p{
 a{
     text-decoration: none;
     position: relative;
+    transition: opacity 300ms ease;
+}
+
+a:hover{
+    opacity: 0.7;
 }
 /* Cool Underline effect */
 
@@ -185,7 +190,7 @@ nav{
 }
 
 .about-me__info--title{
-    font-size: 16px;
+    font-size: 36px;
     animation: fade-up 650ms 400ms backwards;
 }
 .about-me__info--para{
@@ -234,6 +239,23 @@ nav{
     }
     100% {
         opacity: 1;
+    }
+}
+
+.wave{
+    display: inline-block;
+    animation: animate-wave 500ms infinite ease-in-out;
+}
+
+@keyframes animate-wave {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0);
     }
 }
 
@@ -430,7 +452,7 @@ footer{
         height: 68px;
     }
 
-    h1{
+    .about-me__info--title{
         font-size: 28px;
     }
 
@@ -456,6 +478,10 @@ footer{
 @media (max-width: 480px) {
     .nav__link:not(:last-child) {
         display: none;
+    }
+
+    .about-me__info--title{
+        font-size: 20px;
     }
 
     .project__description{
